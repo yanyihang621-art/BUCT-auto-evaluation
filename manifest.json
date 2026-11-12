@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "麦可思教学质量管理平台 - 自动理想化教评助手",
+  "version": "1.0.0",
+  "description": "自动完成教学质量管理平台（mycospxk.com）所有学生教评任务，智能匹配最理想化选项（非常满意、没有违反规定、课程很丰富等），支持第一轮无提交测试与全自动连评。",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.mycospxk.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "自动教评助手"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mycospxk.com/*"
+      ],
+      "css": [
+        "panel.css"
+      ],
+      "js": [
+        "evaluator.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "evaluator.js",
+        "page-agent.js"
+      ],
+      "matches": [
+        "*://*.mycospxk.com/*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+/* 麦可思教学质量管理平台 - 自动教评助手样式 */
+#mycos-auto-eval-panel {
+  position: fixed;
+  top: 70px;
+  right: 16px;
+  width: 310px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(37, 91, 232, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(37, 91, 232, 0.2);
+  z-index: 999998;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  color: #1f2937;
+  overflow: hidden;
+  user-select: none;
+}
+
+.mycos-eval-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #255be8 0%, #4f46e5 100%);
+  color: #ffffff;
+  cursor: move;
+}
+
+.mycos-eval-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.mycos-eval-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0ac86c;
+  box-shadow: 0 0 8px #0ac86c;
+}
+
+.mycos-eval-minimize {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mycos-eval-minimize:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.mycos-eval-body {
+  padding: 12px 14px;
+}
+
+.mycos-eval-status {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f3f6fc;
+  color: #374151;
+  font-size: 12px;
+  line-height: 1.45;
+  margin-bottom: 10px;
+  border-left: 3px solid #255be8;
+}
+
+.mycos-status-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-left-color: #0ac86c;
+}
+
+.mycos-status-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left-color: #ef4444;
+}
+
+.mycos-status-testing,
+.mycos-status-running {
+  background: #eff6ff;
+  color: #1e40af;
+  border-left-color: #3b82f6;
+}
+
+.mycos-eval-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.mycos-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.mycos-btn-test {
+  background: linear-gradient(135deg, #0ac86c 0%, #059669 100%);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(10, 200, 108, 0.26);
+}
+
+.mycos-btn-test:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.mycos-btn-auto {
+  background: linear-gradient(135deg, #255be8 0%, #4f46e5 100%);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(37, 91, 232, 0.25);
+}
+
+.mycos-btn-auto:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.mycos-btn-stop {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.mycos-btn-view {
+  background: #f0f5ff;
+  color: #255be8;
+  border: 1px solid #bfd4ff;
+}
+
+.mycos-btn-copy {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.mycos-btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.mycos-eval-settings {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.mycos-eval-settings summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #4b5563;
+  outline: none;
+}
+
+.mycos-setting-item {
+  margin-top: 8px;
+}
+
+.mycos-setting-item label {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.mycos-setting-label {
+  margin-bottom: 4px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+#mycos-opt-comment {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.mycos-eval-log {
+  max-height: 110px;
+  overflow-y: auto;
+  background: #111827;
+  color: #e5e7eb;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.mycos-eval-log:empty {
+  display: none;
+}
+
+.mycos-log-item {
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.mycos-log-success {
+  color: #34d399;
+}
+
+.mycos-log-warn {
+  color: #fbbf24;
+}
+
+.mycos-log-error {
+  color: #f87171;
+}
+
+/* 第一轮测试答案核对弹窗 */
+#mycos-eval-report-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.mycos-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.mycos-modal-card {
+  position: relative;
+  width: min(980px, 94vw);
+  max-height: 88vh;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mycos-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 22px;
+  background: linear-gradient(135deg, #255be8 0%, #4f46e5 100%);
+  color: #ffffff;
+}
+
+.mycos-modal-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.mycos-modal-header p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.mycos-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mycos-modal-body {
+  padding: 16px 22px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.mycos-report-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 10px 14px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  color: #065f46;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.mycos-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.mycos-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.mycos-report-table th {
+  background: #f8fafc;
+  color: #334155;
+  padding: 10px 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mycos-report-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.mycos-report-table tr:hover td {
+  background: #f8fafc;
+}
+
+.mycos-td-num {
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+.mycos-td-type {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.mycos-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.mycos-badge-req {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.mycos-badge-opt {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.mycos-opt-chip {
+  display: inline-block;
+  padding: 3px 8px;
+  margin: 2px 4px 2px 0;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.mycos-opt-chip-selected {
+  background: #d1fae5;
+  color: #065f46;
+  border-color: #10b981;
+  font-weight: 600;
+}
+
+.mycos-chosen-main {
+  color: #059669;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.mycos-chosen-skipped {
+  color: #475569;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.mycos-chosen-reason {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.mycos-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 12px 22px;
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+}
